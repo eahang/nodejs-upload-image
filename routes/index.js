@@ -2,8 +2,13 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/', function (req, res, next) {
+    res.render('index', {title: 'Express', data: ''});
+});
+
+router.post('/', function (req, res, next) {
+    console.log(req.file);
+    res.render('index', {title: 'Express', data:req.body.imageFile});
 });
 
 module.exports = router;
