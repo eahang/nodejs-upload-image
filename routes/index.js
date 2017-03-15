@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
 
 router.post('/', function (req, res, next) {
     console.log(req.file);
-    res.render('index', {title: 'Express', data:req.body.imageFile});
+    res.render('index', {title: 'Express'});
 });
 
 module.exports = router;

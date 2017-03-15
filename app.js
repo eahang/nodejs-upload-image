@@ -60,7 +60,7 @@ function fileFilter(req, file, cb){
     var bool = false;
     var extensionFile = getExtension(file);
     for(var i=0; i<extensions.length; i++){
-        if(extensionFile == extensions[i]){
+        if(extensionFile.toLowerCase() == extensions[i]){
             cb(null, true);
             bool = true;
         }
